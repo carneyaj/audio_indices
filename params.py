@@ -7,7 +7,7 @@ Resample to 16kHz
 '''
 
 samplerate = 16000	# Audio samplerate
-seconds = 60
+seconds = 20
 	# length of each window of analysis
 gain = 20   		# multiplier on audio samples
 
