@@ -17,7 +17,7 @@ from datetime import datetime
 
 from scipy import signal, fftpack
 
-from display import displayprint, displayoff
+#from display import displayprint, displayoff
 
 import params
 
