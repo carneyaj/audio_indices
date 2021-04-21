@@ -67,7 +67,7 @@ def class_names_from_csv(class_map_csv_text):
 	class_names = class_names[1:]  # Skip CSV header
 	return class_names
 
-interpreter = Interpreter("/home/pi/yamnet/yamnet.tflite")
+interpreter = Interpreter("yamnet.tflite")
 
 input_details = interpreter.get_input_details()
 waveform_input_index = input_details[0]['index']
