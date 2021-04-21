@@ -48,11 +48,11 @@ try:
 #   Error handling
 
 except KeyboardInterrupt:
-	displayoff()
+#	displayoff()
 	print("\nwriting datafile...")
 	np.savez_compressed(params.save_directory + filename, embeddings=emb, scores_indices=classes_and_indices)
 	print("done")
 except Exception as e:
 	print(type(e).__name__ + ': ' + str(e))
-	displayoff()
+#	displayoff()
 	print("\nquitting...")
