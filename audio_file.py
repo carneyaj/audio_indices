@@ -8,7 +8,7 @@ Resample to 16kHz
 '''
 import sys
 import numpy as np
-import sounddevice as sd
+#import sounddevice as sd
 from scipy.io.wavfile import read, write
 import scipy.signal as sps
 import params
@@ -63,9 +63,7 @@ try:
 	np.savez_compressed(params.save_directory + outfilename, embeddings=emb, scores_indices=classes_and_indices)
 	print("Done")
 except KeyboardInterrupt:
-	displayoff()
 	print("\nquitting...")
 except Exception as e:
 	print(type(e).__name__ + ': ' + str(e))
-	displayoff()
 	print("\nquitting...")
