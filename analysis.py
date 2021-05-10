@@ -67,7 +67,7 @@ def class_names_from_csv(class_map_csv_text):
 	class_names = class_names[1:]  # Skip CSV header
 	return class_names
 
-interpreter = Interpreter("yamnet.tflite")
+interpreter = Interpreter("/home/pi/audio_indices/yamnet.tflite")
 
 input_details = interpreter.get_input_details()
 waveform_input_index = input_details[0]['index']
@@ -76,7 +76,7 @@ scores_output_index = output_details[0]['index']
 embeddings_output_index = output_details[1]['index']
 spectrogram_output_index = output_details[2]['index']
 
-class_names = class_names_from_csv(open("yamnet_class_map.csv").read())
+class_names = class_names_from_csv(open("/home/pi/audio_indices/yamnet_class_map.csv").read())
 
 def classify(waveform):
 	#time1 = time.time()
