@@ -34,7 +34,7 @@ try:
 		queue.put(indata.copy())
 
 	with sd.InputStream(channels=1, callback=callback, blocksize=int(params.seconds * params.samplerate), samplerate=params.samplerate):
-		while True:
+		while count < params.blocks:
 			timestamp, scores, embeddings, bioindices = analysis(params.gain*queue.get(),params.samplerate)
 			#newdata = np.append(timestamp, scores)
 			newdata = np.append(scores,bioindices)
@@ -42,6 +42,10 @@ try:
 			emb = np.vstack((emb,embeddings.astype(params.out_dtype)))
 			count += 1
 			print(count*params.seconds/60, "minutes of audio")
+			
+		print("\nwriting datafile...")
+                np.savez_compressed(params.save_directory + filename, embeddings=emb, scores_indices=clas$
+                print("done")
 
 
 #-----------------------------------------------------------
