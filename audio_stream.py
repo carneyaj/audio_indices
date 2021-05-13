@@ -44,8 +44,8 @@ try:
 			print(count*params.seconds/60, "minutes of audio")
 			
 		print("\nwriting datafile...")
-                np.savez_compressed(params.save_directory + filename, embeddings=emb, scores_indices=classes_and_indices)
-                print("done")
+		np.savez_compressed(params.save_directory + filename, embeddings=emb, scores_indices=classes_and_indices)
+		print("done")
 
 
 #-----------------------------------------------------------
