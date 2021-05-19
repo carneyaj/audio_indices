@@ -89,7 +89,7 @@ def classify(waveform):
 	    interpreter.get_tensor(embeddings_output_index),
 	    interpreter.get_tensor(spectrogram_output_index))
 
-	top_classes = np.argsort(scores.mean(axis=0))[::-1][:4]
+	top_classes = np.argsort(scores.mean(axis=0))[::-1][:params.top_classes - 1]
 	classlist = ""
 	for i in top_classes:
 		classlist += class_names[i] + "#"
