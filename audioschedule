@@ -1,2 +1,2 @@
 */20 * * * * pi python3 /home/pi/audio_indices/audio_stream.py > /home/pi/record.log 2>&1
-*/2 * * * * pi /home/pi/rclone_copy.sh > /home/pi/sync.log @>&1
+*/5 * * * * pi /home/pi/rclone_copy.sh > /home/pi/sync.log @>&1
