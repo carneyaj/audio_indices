@@ -31,7 +31,7 @@ def analysis(data,samplerate):
 	#filename = timestamp + ".wav"
 	#write(filename, samplerate, indata)
 	seconds = int(len(waveform)/samplerate)
-	print("---", seconds,"second audio frame at",timestamp)
+	#print("---", seconds,"second audio frame at",timestamp)
 	
 	scores , embeddings, _ = classify(waveform)
 
