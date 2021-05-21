@@ -14,5 +14,5 @@ gain = 20   		# multiplier on audio samples
 save_directory = "/home/pi/data/"
 out_dtype = "float32"
 
-top_classes = 4
+top_classes = 6
 
