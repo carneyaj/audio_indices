@@ -42,16 +42,16 @@ def analysis(data,samplerate):
 
 	j_bin = 5 #window width in seconds
 	ACI, _ = compute_ACI(spectro, j_bin*j_bin_mult)
-	print("Acoustic Complexity Index:", ACI)
+	#print("Acoustic Complexity Index:", ACI)
 
 	BI = compute_BI(spectro, frequencies)
-	print("Bioacoustic Index:", BI)
+	#print("Bioacoustic Index:", BI)
 
 	AEI = compute_AEI(spectro)
-	print("Acoustic Evenness Index:", AEI)
+	#print("Acoustic Evenness Index:", AEI)
 
 	ADI = compute_ADI(spectro)
-	print("Acoustic Diversity Index:", ADI)
+	#print("Acoustic Diversity Index:", ADI)
 
 	timestamp = np.array(datetime.now().timestamp())
 	bioindices = np.array([ACI,BI,AEI,ADI], dtype = params.out_dtype)
