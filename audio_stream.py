@@ -43,7 +43,7 @@ try:
 			classes_and_indices = np.vstack((classes_and_indices, newdata))
 			emb = np.vstack((emb,embeddings.astype(params.out_dtype)))
 			count += 1
-			print(count*params.seconds/60, "minutes of audio")
+			#print(count*params.seconds/60, "minutes of audio")
 			
 		print("\nwriting datafile...")
 		np.savez_compressed(params.save_directory + filename, embeddings=emb, scores_indices=classes_and_indices)
