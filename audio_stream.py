@@ -21,7 +21,7 @@ import params
 queue = Queue(maxsize=1)
 
 emb = np.empty([0,1024],dtype = params.out_dtype) #Should initialize to fullsize for runtime eventually, fill with zeros
-classes_and_indices = np.empty([0,525],dtype = params.out_dtype)
+classes_and_indices = np.empty([0,521 + params.top_classes],dtype = params.out_dtype)
 
 
 filename = datetime.now().strftime("%Y_%m_%d-%H_%M_%S")
