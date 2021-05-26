@@ -1,2 +1,2 @@
 10 * * * * pi python3 /home/pi/audio_indices/audio_stream.py
-20 * * * * pi /home/pi/rclone_copy.sh
+21 * * * * pi /home/pi/rclone_copy.sh
