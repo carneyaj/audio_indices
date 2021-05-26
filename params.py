@@ -7,8 +7,8 @@ Resample to 16kHz
 '''
 
 samplerate = 16000	# Audio samplerate
-seconds = 2		# length of each window of analysis
-blocks = 600		# number of analysis blocks of length *seconds* 
+seconds = 60		# length of each window of analysis
+blocks = 1		# number of analysis blocks of length *seconds* 
 gain = 20   		# multiplier on audio samples
 
 save_directory = "/home/pi/data/"
