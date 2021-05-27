@@ -25,7 +25,7 @@ classes_and_indices = np.empty([0,525],dtype = params.out_dtype)
 
 
 filename = datetime.now().strftime("%Y_%m_%d-%H_%M_%S")
-filename = "new" + filename
+#filename = "new" + filename
 
 
 count = 0
