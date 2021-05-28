@@ -1,2 +1,3 @@
 */15 * * * * pi python3 /home/pi/audio_indices/audio_stream.py
 */5 * * * * pi /home/pi/rclone_copy.sh
+*/10 * * * * pi python3 /home/pi/dbtemps.py
